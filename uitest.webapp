@@ -1,7 +1,6 @@
 {
   "name": "UI tests",
-  "launch_path": "/index.html",
-  "type": "certified",
+  "package_path": "/test-apps/uitest.zip",
   "developer": {
     "name": "The Gaia Team",
     "url": "https://github.com/mozilla-b2g/gaia"
