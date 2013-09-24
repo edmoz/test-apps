@@ -7,7 +7,7 @@
     "url": "https://github.com/mozilla-b2g/gaia"
   },
   "icons": {
-    "128": "/style/icons/Uitest.png"
+    "128": ""
   },
   "permissions": {
     "backgroundservice":{},
