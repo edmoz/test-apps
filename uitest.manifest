@@ -1,0 +1,12 @@
+{
+  "name" : "UI tests",
+  "version" : "1.0",
+  "icons": {
+    "126": "/uitest/style/icons/Uitest.png"
+  },
+  "developer": {
+    "name": "Mozilla QA",
+    "url": "http://mozilla.org"
+  },
+  "package_path": "/test_apps/uitest.zip"
+}
