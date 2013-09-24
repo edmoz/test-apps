@@ -1,6 +1,6 @@
 <html>
 <head>
-<<title>Privileged App Test</title>
+<title>Privileged App Test</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 </head>
 <body>
@@ -13,7 +13,7 @@ Install UI tests</button>
   function install(ev) {
     ev.preventDefault();
     // define the manifest URL
-    var manifest_url = "http://edmoz.github.io/uitest.webapp";
+    var manifest_url = "http://edmoz.github.io/uitest/manifest.webapp";
     // install the app
     var myapp = navigator.mozApps.install(manifest_url);
     myapp.onsuccess = function(data) {
