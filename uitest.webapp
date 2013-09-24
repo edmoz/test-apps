@@ -1,12 +1,13 @@
 {
   "name": "UI tests",
   "launch_path": "/uitest/index.html",
+  "description": "My elevator pitch goes here",
   "developer": {
     "name": "The Gaia Team",
     "url": "https://github.com/mozilla-b2g/gaia"
   },
   "icons": {
-    "120": "/style/icons/Uitest.png"
+    "128": "/style/icons/Uitest.png"
   },
   "permissions": {
     "backgroundservice":{},
