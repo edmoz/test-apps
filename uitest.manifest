@@ -1,12 +1,11 @@
 {
   "name" : "UI tests",
-  "version" : "1.0",
+  "version" : "1.5",
+  "size" : 1000,
+  "release_notes": "First v1.1 release",
   "icons": {
-    "126": "/uitest/style/icons/Uitest.png"
+    "128": "/img/online.png"
   },
-  "developer": {
-    "name": "Mozilla QA",
-    "url": "http://mozilla.org"
-  },
-  "package_path": "/test_apps/uitest.zip"
+  "package_path": "/test-apps/uitest.zip"
 }
+
