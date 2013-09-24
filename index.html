@@ -18,8 +18,8 @@ Install UI tests</button>
       // App is installed, remove button
       console.log('installed: ' + data);
     };
-    myapp.onerror = function(installapp) {
-      console.log('onerror: ' + installapp.error.name)
+    myapp.onerror = function() {
+      console.log('onerror: ' + this.error.name)
       // App wasn't installed, info is in
       // installapp.error.name
      };
