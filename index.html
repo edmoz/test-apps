@@ -1,20 +1,20 @@
 <button id="install">
-  Install this awesome app on your homescreen!
-</button>
+Install UI tests</button>
   
 <script>
 (function(){
   function install(ev) {
     ev.preventDefault();
     // define the manifest URL
-    var manifest_url = "http://edmoz.github.io/manifest.webapp";
+    var manifest_url = "http://edmoz.github.io/uitest.webapp";
     // install the app
     var myapp = navigator.mozApps.install(manifest_url);
     myapp.onsuccess = function(data) {
       // App is installed, remove button
-      this.parentNode.removeChild(this);
+      console.log('installed: ' + data);
     };
     myapp.onerror = function() {
+      console.log('onerror: ' + installapp.error.name)
       // App wasn't installed, info is in
       // installapp.error.name
      };
