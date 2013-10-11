@@ -2,9 +2,9 @@
   "version": "1.0",
   "name": "Simple Push Test",
   "description": "A test app for testing Simple Push",
-  "launch_path": "/qa-testcase-data/webapi/simplepush/index.html",
+  "launch_path": "/test-apps/simplepush/index.html",
   "icons": {
-    "128": "/qa-testcase-data/webapi/simplepush/qalogo.png"
+    "128": "/test-apps/simplepush//qalogo.png"
   },
   "permissions": {
     "push": {}
@@ -14,6 +14,6 @@
   ],
   "developer": {
     "name": "Mozilla QA",
-    "url": "http://jasondanielsmith.wordpress.com/"
+    "url": "http://quality.mozilla.org/"
   }
 }

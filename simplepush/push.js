@@ -1,7 +1,19 @@
-﻿function handlePushMessage(message) {
+﻿var pushEndpoint = "";
+
+function handlePushMessage(message) {
   console.log('push message received');
   console.log('endpoint: ' + message.pushEndpoint);
   console.log('version: ' + message.version);
+}
+
+function sendHttpPut() {
+  var currentRegistrationsUI = document.getElementById('currentRegistrations');
+  console.log('pushEndpoint: ' + pushEndpoint);
+
+  var xmlhttp;
+  xmlhttp.open("PUT", pushEndpoint, true);
+  xmlhttp.send("version=999");
+  console.log('HTTP PUT sent!');
 }
 
 function registerEndPoint() {
@@ -15,6 +27,8 @@ function registerEndPoint() {
     console.log('register success fired with endpoint: ' + endPoint);
 
     outputResult.textContent = 'End point registered: ' + endPoint;
+    pushEndpoint = endPoint;
+    var pollRegistrations = self.setInterval(updateCurrentRegistrations,1000);
   };
 
   request.onerror = function(err) {
@@ -89,7 +103,7 @@ function updateCurrentRegistrations() {
 }
 
 function installAsApp() {
-  var request = navigator.mozApps.install('http://mozilla.github.io/qa-testcase-data/webapi/simplepush/manifest.webapp');
+  var request = navigator.mozApps.install('http://edmoz.github.io/test-apps/simplepush/manifest.webapp');
 
   request.onsuccess = function(e) {
     console.log('Installed successfully');
@@ -105,6 +119,7 @@ function initialize() {
 
   document.getElementById('registerPushEndPoint').onclick = registerEndPoint;
   document.getElementById('refreshPushEndPoints').onclick = updateCurrentRegistrations;
+  document.getElementById('sendHttpPut').onclick = sendHttpPut;
   document.getElementById('installApp').onclick = installAsApp;
 }
 
