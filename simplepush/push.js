@@ -28,7 +28,7 @@ function registerEndPoint() {
 
     outputResult.textContent = 'End point registered: ' + endPoint;
     pushEndpoint = endPoint;
-    var pollRegistrations = self.setInterval(updateCurrentRegistrations,1000);
+    // var pollRegistrations = self.setInterval(updateCurrentRegistrations,5000);
   };
 
   request.onerror = function(err) {
@@ -73,7 +73,7 @@ function updateCurrentRegistrations() {
       console.log('Version: ' + currentRegistration.version);
 
       var currentRegistrationDisplay = document.createElement('p');
-      currentRegistrationDisplay.textContent = 'End point: ' + currentRegistration.pushEndpoint + ', version: ' + currentRegistration.version;
+      currentRegistrationDisplay.textContent = 'current version: ' + currentRegistration.version;
       currentRegistrationsUI.appendChild(currentRegistrationDisplay);
 
       var unregisterEndPointUI = document.createElement('input');
