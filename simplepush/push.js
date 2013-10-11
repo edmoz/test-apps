@@ -10,7 +10,7 @@ function sendHttpPut() {
   var currentRegistrationsUI = document.getElementById('currentRegistrations');
   console.log('pushEndpoint: ' + pushEndpoint);
 
-  var xmlhttp;
+  var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("PUT", pushEndpoint, true);
   xmlhttp.send("version=999");
   console.log('HTTP PUT sent!');
